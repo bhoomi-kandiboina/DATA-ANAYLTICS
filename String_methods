@@ -1,0 +1,329 @@
+#String Methods
+>>> #len()
+>>> a="python"
+>>> len(a)
+6
+>>> a="python course"
+>>> len(a)
+13
+>>> a=""
+>>> len(a)
+0
+>>> a=" "
+>>> len(a)
+1
+>>> 
+>>> #Count()
+>>> a = "twinkle twinkle little star"
+>>> count(a) #this is method not builtin function
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    count(a) #this is method not builtin function
+NameError: name 'count' is not defined. Did you mean: 'round'?
+>>> a.count("twinkle")
+2
+>>> a.count("t")
+5
+>>> a.count("a")
+1
+>>> a.count(" ")
+3
+>>> a = 1,2,3,4
+>>> a.count(1)
+1
+>>> a=3,4,3,5,6,6,7,5,
+a.count(3)
+2
+a.count(6)
+2
+
+#find a string
+a = "code"
+a.find("d")
+2
+a.find("code")
+0
+a.find("co")
+0
+b = "hello"
+b.find("l")
+2
+b[2:4]
+'ll'
+b.find("m")
+-1
+#In find() method only single letter is allow
+#In find() method only single letter is allow
+
+
+#escape sequences
+#\n -> new line
+#\t -> tab space
+a = "Name\nMoblieno\tmailid\ncollege\tbranch"
+print(a)
+Name
+Moblieno	mailid
+college	branch
+a = "Name:Bhoomika\nMobileno:7416593354\tMailId:bhoomikakandiboina@gmail.com\nCollege:SRKRCE\tbranch:AIML"
+print(a)
+Name:Bhoomika
+Mobileno:7416593354	MailId:bhoomikakandiboina@gmail.com
+College:SRKRCE	branch:AIML
+
+#Replace()
+a= "wait until you succeed"
+a.replace("wait","work")
+'work until you succeed'
+b = "Data Analytics"
+b.replace("Analytics","analyst")
+'Data analyst'
+c="hi"
+c.replace("h","i")
+'ii'
+d = 1,2,3,4,5
+d.replace(1,4)
+Traceback (most recent call last):
+  File "<pyshell#55>", line 1, in <module>
+    d.replace(1,4)
+AttributeError: 'tuple' object has no attribute 'replace'
+d.replace("1","9")
+Traceback (most recent call last):
+  File "<pyshell#56>", line 1, in <module>
+    d.replace("1","9")
+AttributeError: 'tuple' object has no attribute 'replace'
+e="1,2,3,4"
+e.replace("1","6")
+'6,2,3,4'
+
+#lower()
+a = "code"
+a.lower()
+'code'
+a = "CODE"
+a.lower()
+'code'
+
+#upper()
+a = "python"
+a.upper()
+'PYTHON'
+b = "website"
+b.upper()
+'WEBSITE'
+
+#Capitalize()
+a = "development"
+a.capitalize()
+'Development'
+b = "programming"
+b.capitalize()
+'Programming'
+
+#title()
+a = "python course"
+a.title()
+'Python Course'
+b = "data analytics"
+b.title()
+'Data Analytics'
+c = "i am in class"
+c.title()
+'I Am In Class'
+c.capitalize()
+'I am in class'
+
+#true or false
+#isupper()
+a = "PYTHON"
+a.isupper()
+True
+b="Ride"
+b.isupper()
+False
+
+#islower()
+a="devops"
+a.lower()
+'devops'
+a.islower()
+True
+b="coding"
+b.islower()
+True
+
+#isalpha() - all alphabets
+a="Helloworld"
+a.isalpha()
+True
+b ="hello world"
+b.isalpha()
+False
+
+#isdigit()
+a=1234
+a.isdigit()
+Traceback (most recent call last):
+  File "<pyshell#52>", line 1, in <module>
+    a.isdigit()
+AttributeError: 'int' object has no attribute 'isdigit'
+a="1234"
+a.isdigit()
+True
+b ="hello"
+b.isdigit()
+False
+
+#startswith
+a = "python course"
+a.startswith("p")
+True
+a.startwith("c")
+Traceback (most recent call last):
+  File "<pyshell#61>", line 1, in <module>
+    a.startwith("c")
+AttributeError: 'str' object has no attribute 'startwith'. Did you mean: 'startswith'?
+a.startswith("c")
+False
+
+#endswith
+a = "develop"
+a.endswith("p")
+True
+a.endswith("d")
+False
+
+#isalnum
+a="Bhoomi"
+a.isalum()
+Traceback (most recent call last):
+  File "<pyshell#71>", line 1, in <module>
+    a.isalum()
+AttributeError: 'str' object has no attribute 'isalum'. Did you mean: 'isalnum'?
+a.isalnum()
+True
+b="bhoomi45"
+b.isalnum()
+True
+
+#Strip - remove spaces - 2 types:
+#rstrip(),lstrip() -removing whitespaces
+a="     bhoomi   "
+a.strip()
+'bhoomi'
+a.rstrip()
+'     bhoomi'
+a.lstrip()
+'bhoomi   '
+
+#split() - separate the words
+a = "python java c c++"
+a.split()
+['python', 'java', 'c', 'c++']
+b = "python is easy"
+a.split()
+['python', 'java', 'c', 'c++']
+b.split()
+['python', 'is', 'easy']
+b[1].upper()
+'Y'
+c = b.split()
+c
+['python', 'is', 'easy']
+c[1].upper()
+'IS'
+
+#join - merge the words
+#join()
+a="apple","banana","grapes"
+"".join(a)
+'applebananagrapes'
+" ".join(a)
+'apple banana grapes'
+"k".join(a)
+'applekbananakgrapes'
+b = "hello"
+"k".join(a)
+'applekbananakgrapes'
+"k".join(b)
+'hkeklklko'
+c="python is easy"
+"u".join(c)
+'puyutuhuounu uiusu ueuausuy'
+
+#concatenation() - add two strings
+a="code"
+b="gnan"
+print(a+b)
+codegnan
+a="python"
+b="course"
+a+b
+'pythoncourse'
+print(a+" "+b)
+python course
+
+#eg
+fname = "Bhoomika"
+lname = "K"
+print(fname+lname)
+BhoomikaK
+print(fname+" "+lname)
+Bhoomika K
+lname="kandiboina"
+print(fname.title()+" "+lname.title())
+Bhoomika Kandiboina
+print((fname+" "+lname).title())
+Bhoomika Kandiboina
+
+#formatting - adding the additional data
+a=5
+b=6
+print(a+b)
+11
+print("the sum is ",a+b)
+the sum is  11
+city ="vijawada"
+print("city is ",city)
+city is  vijawada
+city = "vijayawada"
+print("city is ",city)
+city is  vijayawada
+
+#format()
+a="motu"
+b="pathulu"
+>>> print("hello {}{}".format(a,b))
+hello motupathulu
+>>> print("hello {} {}".format(a,b))
+hello motu pathulu
+>>> print("hello {} hello {}".format(a,b))
+hello motu hello pathulu
+>>> 
+>>> #fstring
+>>> a="sweety"
+>>> b="cute"
+>>> print(f"hello {a}{b}")
+hello sweetycute
+>>> print(f"hello {a} {b}")
+hello sweety cute
+>>> c="pie"
+>>> print(f"hello {b}{c}")
+hello cutepie
+>>> print(f"hello {b} hello {c}")
+hello cute hello pie
+>>> 
+>>> 
+>>> #example
+>>> a=4
+>>> b=5
+>>> pirnt("product of ",(a*b))
+Traceback (most recent call last):
+File "<pyshell#156>", line 1, in <module>
+    pirnt("product of ",(a*b))
+NameError: name 'pirnt' is not defined. Did you mean: 'print'?
+>>> print("product is ",a*b)
+product is  20
+>>> print("product is {}".format(a*b))
+product is 20
+>>> print(f"product is {a*b}")
+product is 20
